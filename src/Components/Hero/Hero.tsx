@@ -21,8 +21,8 @@ const Hero : React.FC = () => {
   
   return (
 
-   <div>
-        <section className='flex justify-center items-center fixed   w-full h-[50rem] bg-grey-200 text-black'>  
+   <div className=" mb-1">
+        <section className='flex justify-center items-center   w-full h-[50rem] bg-grey-200 text-black'>  
         <div className='absolute text-center mb-72 space-y-5'>
            <h1 className='text-6xl font-bold'>iPhone 16<span>e</span></h1>
            <h2 className='text-3xl'>Latest iPhone.GreatPrice.</h2>
@@ -42,7 +42,6 @@ const Hero : React.FC = () => {
        ref={vidRef}
        className=""
       ></video>
-    
 
        </div>
  
