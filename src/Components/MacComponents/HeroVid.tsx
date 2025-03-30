@@ -10,10 +10,9 @@ const HeroVid: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const newScale = scrollY < 50 ? 1 : Math.max(0.7, 1 - scrollY / 700);
+      const newScale = scrollY < 50 ? 1 : Math.max(0.7, 1 - scrollY / 1200); // Expands slower
       setScale(newScale);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -31,26 +30,24 @@ const HeroVid: React.FC = () => {
 
   return (
     <section className="relative w-full h-[90vh] flex flex-col items-center justify-center overflow-hidden">
-      <div className="text-black text-center mb-4">
-        <h1>Mac</h1>
-        <h1>If you can dream it, Mac can do it.</h1>
-      </div>
 
       <div
-        className="relative transition-all duration-200 ease-in-out pt-32" // Added relative positioning
+      className="relative transition-all duration-[600ms] ease-in-out pt-32"
         style={{
           width: scale === 1 ? "100vw" : "90%",
-          height: "110%",
+          height: "100%",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           paddingTop: "44px",
+          borderRadius: scale < 1 ? "30px" : "0px", // Round corners only when scrolling down
+         overflow: "hidden", 
         }}
       >
         <video
           ref={videoRef}
           src={video}
-          className="object-contain rounded-md w-full h-ful" // Added w-full and h-full
+          className="object-contain  w-full h-ful" // Added w-full and h-full
           autoPlay
           loop
           muted
@@ -58,12 +55,13 @@ const HeroVid: React.FC = () => {
 
         <button
           onClick={togglePlayPause}
-          className="absolute bottom-5 right-5 bg-gray-800 text-white p-3 rounded-full opacity-80 hover:opacity-100 transition"
-          style={{ right: scale ===1? '5vw' : '4.5vw'}} //adjust the right position based on the scale.
+          className="absolute bottom-5 right-5 bg-gray-400 text-white p-3 rounded-full opacity-80 hover:opacity-100 transition"
+          style={{ right: scale ===1? '2vw' : '4.5vw'}} //adjust the right position based on the scale.
         >
-          {isPlaying ? <FaPause size={20} /> : <FaPlay size={20} />}
+          {isPlaying ? <FaPause size={15} /> : <FaPlay size={20} />}
         </button>
       </div>
+     
     </section>
   );
 };
