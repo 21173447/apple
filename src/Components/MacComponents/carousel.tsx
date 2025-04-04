@@ -22,21 +22,19 @@ const Carousel: React.FC = () => {
         modules={[Navigation]}
         className="w-full"
       >
+
         {slides.map((slide, index) => (
-            
           <SwiperSlide key={index} className="h-[600px]">
             <div className={`relative overflow-hidden rounded-2xl shadow-lg h-full w-full flex flex-col items-center p-6 ${slide.bg}`}>
                 
               <div className="w-full h-[800px]  rounded-lg flex items-center justify-center">
                 <span className="text-gray-600">Image Here</span>
               </div>
-        
+
               <div className="mt-4 text-center">
                 <h3 className="text-xl font-semibold text-white">{slide.title}</h3>
                 <p className="text-base text-white">{slide.description}</p>
               </div>
-              
-           
               <button className="absolute bottom-4 right-4 bg-gray-900 p-3 rounded-full   text-white">+</button>
             </div>
           </SwiperSlide>

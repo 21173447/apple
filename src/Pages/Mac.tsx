@@ -3,6 +3,8 @@ import Icons from '../Components/MacComponents/icons'
 import Tagline from '../Components/MacComponents/tagline'
 import HeroVid from '../Components/MacComponents/HeroVid'
 import Carousel from '../Components/MacComponents/carousel'
+import Advert from '../Components/MacComponents/Advert'
+import Explore from '../Components/MacComponents/ExploreLineup/Explore'
 
 
 
@@ -27,6 +29,31 @@ const Mac:React.FC = () => {
        </div>
     </div>
     <Carousel/>
+  
+    <div className="flex font-semibold text-6xl py-20 ml-24">
+     Help me choose.
+       </div>
+ <div className='w-[90%] mx-auto'>
+   <Advert/>    
+   </div> 
+
+   <div className="flex justify-between items-center px-24 py-20">
+  {/* Left Side - Heading */}
+  <div className="font-semibold text-6xl">
+    Explore the  lineup
+  </div>
+
+  {/* Right Side - Links */}
+  <div className="flex  gap-5 text-right">
+  <a className="text-blue-500 hover:underline  text-lg" href="">Help me choose &gt;</a>
+  <a className="text-blue-500 hover:underline text-lg " href="">Compare all models &gt;</a>
+  </div>
+</div>
+
+<Explore/>
+
+
+
 </section>
   )
 }
