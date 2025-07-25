@@ -4,7 +4,7 @@ import Tagline from '../Components/MacComponents/tagline'
 import HeroVid from '../Components/MacComponents/HeroVid'
 import Carousel from '../Components/MacComponents/carousel'
 import Advert from '../Components/MacComponents/Advert'
-import Explore from '../Components/MacComponents/ExploreLineup/Explore'
+
 
 
 
@@ -48,12 +48,7 @@ const Mac:React.FC = () => {
   <a className="text-blue-500 hover:underline  text-lg" href="">Help me choose &gt;</a>
   <a className="text-blue-500 hover:underline text-lg " href="">Compare all models &gt;</a>
   </div>
-</div>
-
-<Explore/>
-
-
-
+ </div>
 </section>
   )
 }

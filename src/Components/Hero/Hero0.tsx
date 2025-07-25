@@ -23,6 +23,7 @@ const Hero0: React.FC = () => {
 
 
   return (
+    
     <section className="  flex justify-center  items-center w-full h-[70rem]  text-white'">
       <div className="absolute text-center  space-y-3 text-white">
        
@@ -60,10 +61,7 @@ const Hero0: React.FC = () => {
       <div>
   </div>
 
-      
-
-
-    </section>
+  </section>
   );
 };
 

@@ -41,7 +41,7 @@ const NavBar: React.FC = () => {
         <li>Accessories</li>
         <li>Support</li>
 
-        {/* Search icon link */}
+ 
         <Link to="/" className="text-lg">
           <IoIosSearch />
         </Link>
@@ -60,7 +60,7 @@ const NavBar: React.FC = () => {
                 .find((item) => item.name === hoveredItem)
                 ?.dropdown.map((subItem) => (
                   <li key={subItem} className="p-2 hover:bg-gray-200 cursor-pointer">
-                    {/* Use Link to navigate to sub-items */}
+                   
                     <Link to={`/${hoveredItem.toLowerCase()}/${subItem.toLowerCase().replace(" ", "-")}`}>
                       {subItem}
                     </Link>
